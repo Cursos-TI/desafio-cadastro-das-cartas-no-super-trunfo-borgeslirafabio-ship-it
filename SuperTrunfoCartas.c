@@ -1,9 +1,8 @@
 #include <stdio.h>
 
-int main() 
-{
-    
-    // Declaração das variáveis para a carta 01
+int main() {
+   
+  // Declaração das variáveis para a carta 01
     char estado01;
     char codigo01[4];
     char nomeCidade01[50];
@@ -11,7 +10,9 @@ int main()
     float area01;
     float pib01;
     int pontosTuristicos01;
-
+    float quocientedensidade01;
+    float quocientepib01;
+    
     // Leitura dos dados da carta 01
     printf("Insira os dados da carta 01:\n");
     
@@ -19,10 +20,10 @@ int main()
     scanf(" %c", &estado01); // O espaço antes de %c ignora caracteres de nova linha
 
     printf("Código da Carta: ");
-    scanf("%s", codigo01); // Não precisa de & para arrays
+    scanf("%s", &codigo01); // Não precisa de & para arrays
 
     printf("Nome da Cidade: ");
-    scanf(" %[^\n]", nomeCidade01); // Lê até a nova linha
+    scanf(" %[^\n]", &nomeCidade01); // Lê até a nova linha
 
     printf("Número de habitantes: ");
     scanf("%d", &populacao01); 
@@ -35,7 +36,12 @@ int main()
 
     printf("Número de pontos turísticos: ");
     scanf("%d", &pontosTuristicos01); 
-
+    
+    
+    quocientepib01 = pib01 / populacao01;
+    quocientedensidade01 = populacao01 / area01;
+    
+    
     // Declaração das variáveis para carta 02
     char estado02;
     char codigo02[4];
@@ -44,7 +50,9 @@ int main()
     float area02;
     float pib02;
     int pontosTuristicos02;
-
+    float quocientedensidade02;
+    float quocientepib02;
+    
     // Leitura dos dados da carta 02
     printf("\nInsira os dados da carta 02:\n");
     
@@ -52,10 +60,10 @@ int main()
     scanf(" %c", &estado02); 
 
     printf("Código da Carta: ");
-    scanf("%s", codigo02);  
+    scanf("%s", &codigo02);  
 
     printf("Nome da Cidade: ");
-    scanf(" %[^\n]", nomeCidade02); 
+    scanf(" %[^\n]", &nomeCidade02); 
 
     printf("Número de habitantes: ");
     scanf("%d", &populacao02);
@@ -65,8 +73,12 @@ int main()
 
     printf("PIB (bilhões de reais): ");
     scanf("%f", &pib02); 
+    
     printf("Número de pontos turísticos: ");
     scanf("%d", &pontosTuristicos02); 
+    
+    quocientepib02 = pib02 / populacao02;
+    quocientedensidade02 = populacao02 / area02;
 
     // Exibição dos dados da Carta 01
     printf("\nCarta 01\n");
@@ -77,7 +89,8 @@ int main()
     printf("Tamanho da Área: %.2f km²\n", area01);
     printf("PIB: %.2f bilhões de reais\n", pib01);
     printf("Número de pontos turísticos: %d\n", pontosTuristicos01);
-
+    printf("PIB per capita: %f\n reais ", quocientepib01 );
+    printf("Densidade Populacional: %f km²\n", quocientedensidade01);
     // Exibição dos dados da Carta 02
     printf("\nCarta 02\n");
     printf("Estado: %c\n", estado02);
@@ -87,6 +100,12 @@ int main()
     printf("Tamanho da Área: %.2f km²\n", area02);
     printf("PIB: %.2f bilhões de reais\n", pib02);
     printf("Número de pontos turísticos: %d\n", pontosTuristicos02);
-
+    printf("PIB per capita: %f reais\n ", quocientepib02 );
+    printf("Densidade Populacional: %f km²\n", quocientedensidade02);
+    
+    
+    
+    
     return 0;
+   
 }
