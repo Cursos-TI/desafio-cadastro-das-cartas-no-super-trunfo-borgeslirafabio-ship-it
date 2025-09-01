@@ -1,4 +1,18 @@
 #include <stdio.h>
+ /*
+    Alterações realizadas:
+
+    - Adicionadas comparações entre as cartas para cada atributo numérico:
+      população, área, PIB, pontos turísticos, densidade populacional, PIB per capita e super poder.
+    - Para cada atributo, o programa verifica qual carta tem o melhor valor (maior ou menor, conforme o caso)
+      e atribui um ponto para a carta vencedora.
+    - Ao final, soma-se os pontos de cada carta para determinar o vencedor geral.
+    - Caso haja empate em algum atributo, nenhum ponto é atribuído.
+    - O resultado final exibe qual carta venceu e com quantos pontos, ou se houve empate geral.
+    
+    Essas comparações foram adicionadas além das funcionalidades já existentes no código.
+*/
+
 
 int main() {
     // Declaração das variáveis para a carta 01
