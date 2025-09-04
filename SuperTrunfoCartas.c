@@ -1,6 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*
+    Programa Super Trunfo de Cartas de Países
+
+    Funcionalidades:
+    - Leitura dos dados de duas cartas contendo informações de países/cidades, como estado, código, nome, população, área, PIB, pontos turísticos, etc.
+    - Cálculo de atributos derivados, como densidade demográfica.
+    - Apresentação de um menu interativo para o jogador escolher qual atributo deseja usar para comparar as duas cartas.
+    - Implementação da lógica de comparação entre as cartas baseada no atributo escolhido:
+        * Para todos os atributos, vence a carta com o maior valor, exceto para densidade demográfica, onde vence a carta com o menor valor.
+    - Exibição clara do resultado da comparação, mostrando os nomes das cartas, os valores dos atributos comparados e o vencedor ou empate.
+    - Tratamento de entradas inválidas no menu.
+
+    Objetivo:
+    Tornar o jogo Super Trunfo mais interativo e dinâmico, permitindo que o jogador escolha o critério de comparação e visualizando o resultado de forma clara e intuitiva.
+*/
+
+
+
 int main() {
     // Declaração das variáveis para a carta 01
     char estado01;
